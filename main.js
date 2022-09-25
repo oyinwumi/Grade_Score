@@ -24,16 +24,15 @@ let heading = document.createElement('h4');
 
 function gradingProcess(grade){
     let gradess = document.getElementById('grade-point');
-  
     heading.innerText = grade;
-
     gradess.appendChild(heading);
     inputBox.value = '';
     heading.classList.add('heading-styling');
+  
 }
 
 enterButton.addEventListener('click', function(){
-   
+if (inputBox.value === '' ) return alert('please enter a valid value');
     heading.addEventListener('click', function(){
         grade.removeChild(heading);
     })
